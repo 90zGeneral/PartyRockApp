@@ -9,6 +9,11 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="still time.ttf">
+            <string>StillTime-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--MainVC-->
         <scene sceneID="tne-QT-ifu">
@@ -70,7 +75,7 @@
                                 <rect key="frame" x="0.0" y="220" width="320" height="348"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="83" id="My5-tl-wQ2">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PartyCell" rowHeight="83" id="My5-tl-wQ2" customClass="PartyCell" customModule="PartyRockApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="83"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="My5-tl-wQ2" id="q2I-8k-gXe">
@@ -84,13 +89,24 @@
                                                         <constraint firstAttribute="height" constant="66" id="sqs-vD-DAh"/>
                                                     </constraints>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Where the sun goes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M8w-aR-cgi">
+                                                    <rect key="frame" x="82" y="19" width="230" height="45"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="StillTime-Regular" family="Still Time" pointSize="40"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.50196081400000003" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstItem="zVG-dW-idr" firstAttribute="centerY" secondItem="q2I-8k-gXe" secondAttribute="centerY" id="2qv-Su-RsR"/>
                                                 <constraint firstItem="zVG-dW-idr" firstAttribute="leading" secondItem="q2I-8k-gXe" secondAttribute="leadingMargin" id="ZO7-2u-jAe"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="videoPreviewImage" destination="zVG-dW-idr" id="ui5-0N-CJl"/>
+                                            <outlet property="videoTitle" destination="M8w-aR-cgi" id="aiT-1x-udh"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -109,10 +125,46 @@
                             <constraint firstItem="gKj-AL-v12" firstAttribute="top" secondItem="FFk-4s-lRc" secondAttribute="bottom" id="zAk-w1-tk4"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="1ts-YO-T96" id="uRM-xI-xfI"/>
+                        <segue destination="32P-jw-aF5" kind="showDetail" identifier="SelectedVideo" id="ax5-Md-huL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="138.75" y="135.21126760563379"/>
+        </scene>
+        <!--VideoVC-->
+        <scene sceneID="N1W-iS-Sht">
+            <objects>
+                <viewController id="32P-jw-aF5" customClass="VideoVC" customModule="PartyRockApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="azF-qg-eGJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="fID-69-e4J"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Rgw-Ah-xzE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fVz-rY-NC0">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="PKt-5W-oMz"/>
+                                </constraints>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fVz-rY-NC0" firstAttribute="leading" secondItem="Rgw-Ah-xzE" secondAttribute="leading" id="9FV-ig-pgE"/>
+                            <constraint firstItem="fVz-rY-NC0" firstAttribute="top" secondItem="Rgw-Ah-xzE" secondAttribute="top" id="z8U-z7-942"/>
+                            <constraint firstAttribute="trailing" secondItem="fVz-rY-NC0" secondAttribute="trailing" id="z9E-zH-CU4"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1a6-jv-SMq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="871.875" y="134.1549295774648"/>
         </scene>
     </scenes>
     <resources>

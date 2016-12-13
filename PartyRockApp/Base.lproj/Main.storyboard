@@ -27,7 +27,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="partybanner" translatesAutoresizingMaskIntoConstraints="NO" id="FFk-4s-lRc">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vybzKartelCover" translatesAutoresizingMaskIntoConstraints="NO" id="FFk-4s-lRc">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="180" id="PUs-8p-SXf"/>
@@ -82,14 +82,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="82"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="partybanner" translatesAutoresizingMaskIntoConstraints="NO" id="zVG-dW-idr">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vybzKartel" translatesAutoresizingMaskIntoConstraints="NO" id="zVG-dW-idr">
                                                     <rect key="frame" x="8" y="8" width="66" height="66"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="66" id="8Fm-35-FbG"/>
                                                         <constraint firstAttribute="height" constant="66" id="sqs-vD-DAh"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Where the sun goes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M8w-aR-cgi">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dancehall Hero" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M8w-aR-cgi">
                                                     <rect key="frame" x="82" y="19" width="230" height="45"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="StillTime-Regular" family="Still Time" pointSize="40"/>
@@ -153,14 +153,30 @@
                                     <constraint firstAttribute="height" constant="200" id="PKt-5W-oMz"/>
                                 </constraints>
                             </webView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uql-2D-OOz">
+                                <rect key="frame" x="16" y="250" width="288" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="6FN-Ai-UbL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="StillTime-Regular" family="Still Time" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="fVz-rY-NC0" firstAttribute="leading" secondItem="Rgw-Ah-xzE" secondAttribute="leading" id="9FV-ig-pgE"/>
+                            <constraint firstItem="Uql-2D-OOz" firstAttribute="trailing" secondItem="Rgw-Ah-xzE" secondAttribute="trailingMargin" id="R6u-Ea-cDk"/>
+                            <constraint firstItem="Uql-2D-OOz" firstAttribute="leading" secondItem="Rgw-Ah-xzE" secondAttribute="leadingMargin" id="iYI-B8-3k1"/>
+                            <constraint firstItem="Uql-2D-OOz" firstAttribute="top" secondItem="fVz-rY-NC0" secondAttribute="bottom" constant="50" id="lGn-Ig-YqV"/>
                             <constraint firstItem="fVz-rY-NC0" firstAttribute="top" secondItem="Rgw-Ah-xzE" secondAttribute="top" id="z8U-z7-942"/>
                             <constraint firstAttribute="trailing" secondItem="fVz-rY-NC0" secondAttribute="trailing" id="z9E-zH-CU4"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="songTitleLabel" destination="Uql-2D-OOz" id="WCU-Xy-33v"/>
+                        <outlet property="webView" destination="fVz-rY-NC0" id="yE9-H4-baH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1a6-jv-SMq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -168,6 +184,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="partybanner" width="610" height="297"/>
+        <image name="vybzKartel" width="600" height="600"/>
+        <image name="vybzKartelCover" width="600" height="600"/>
     </resources>
 </document>

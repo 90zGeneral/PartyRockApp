@@ -27,7 +27,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vybzKartelCover" translatesAutoresizingMaskIntoConstraints="NO" id="FFk-4s-lRc">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="partybanner" translatesAutoresizingMaskIntoConstraints="NO" id="FFk-4s-lRc">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="180" id="PUs-8p-SXf"/>
@@ -82,14 +82,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="82"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vybzKartel" translatesAutoresizingMaskIntoConstraints="NO" id="zVG-dW-idr">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="partybanner" translatesAutoresizingMaskIntoConstraints="NO" id="zVG-dW-idr">
                                                     <rect key="frame" x="8" y="8" width="66" height="66"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="66" id="8Fm-35-FbG"/>
                                                         <constraint firstAttribute="height" constant="66" id="sqs-vD-DAh"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dancehall Hero" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M8w-aR-cgi">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Where the Sun Goes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M8w-aR-cgi">
                                                     <rect key="frame" x="82" y="19" width="230" height="45"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="StillTime-Regular" family="Still Time" pointSize="40"/>
@@ -184,7 +184,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="vybzKartel" width="600" height="600"/>
-        <image name="vybzKartelCover" width="600" height="600"/>
+        <image name="partybanner" width="610" height="297"/>
     </resources>
 </document>

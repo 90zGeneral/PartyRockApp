@@ -26,11 +26,13 @@ class PartyCell: UITableViewCell {
         
         let url = URL(string: partyRock.imageURL)!
         
+        //Do expensive task on the background thread
         DispatchQueue.global().async {
             do {
                 let data = try Data(contentsOf: url)
                 
-                DispatchQueue.global().sync {
+                //Now, bring expensive task to the main thread to affect UI
+                DispatchQueue.main.async {
                     self.videoPreviewImage.image = UIImage(data: data)
                 }
                 
